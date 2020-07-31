@@ -38,9 +38,32 @@ else:
     print(f'This week I made ${take_home}.')
 
 
+# 2. Loop Basics
+
+#     A. While
+#         Create an integer variable i with a value of 5.
+#         Create a while loop that runs so long as i is less than or equal to 15
+#         Each loop iteration, output the current value of i, then increment i by one.
+
+i = 5
+while i <= 15:
+    print(i)
+    i += 1
+
+#     B. Create a loop that will count by 2's starting with 0 and ending at 100. 
+#        Follow each number with a new line.
+
+i = 0
+while i <= 100:
+  print(i)
+  i += 2
+  
+ 
 
 
+i = 0
+while i <= 100:
+  print(i)
+  i += 2 and '\n'
 
-
-
-
+  
