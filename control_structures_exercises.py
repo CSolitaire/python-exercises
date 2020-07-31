@@ -34,7 +34,7 @@ if hours_worked <= 40:
     take_home = hours_worked * hourly_rate
     print(f'This week I made ${take_home}.')
 else:
-    take_home = (hours_worked * hourly_rate) + ((40 - hours_worked) * (hourly_rate + (hourly_rate / 2)))
+    take_home = (hours_worked * hourly_rate) + ((hours_worked - 40) * (hourly_rate + (hourly_rate / 2)))
     print(f'This week I made ${take_home}.')
 
 
