@@ -2,7 +2,7 @@
 
 # 1.Conditional Basics
 
-# Prompt the user for a day of the week, print out whether the day is Monday or not
+# A. Prompt the user for a day of the week, print out whether the day is Monday or not
 
 response = input("What day of the week is today?")
 if response.lower().strip() == "monday":
@@ -12,16 +12,16 @@ else:
 print("Thank You!, Have a nice day!")
    
 
-# Prompt the user for a day of the week, print out whether the day is a weekday or a weekend
+# B. Prompt the user for a day of the week, print out whether the day is a weekday or a weekend
 response = input("What day of the week is today?")
+weekday = ("monday","tuesday","wednesday","thursday","friday")
 if response.lower().strip() in weekday:
-    weekday = ("monday","tuesday","wednesday","thursday","friday")
     print ("Boo! It is a weekday...")
 else:
     print ("Yee Haw! It's the weekend, party time!")
 
 
-#  Create variables and make up values for
+#  C. Create variables and make up values for
 #  - the number of hours worked in one week
 #  - the hourly rate
 #  - how much the week's paycheck will be
