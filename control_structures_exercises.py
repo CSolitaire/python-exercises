@@ -27,5 +27,20 @@ else:
 #  - how much the week's paycheck will be
 #  Write the python code that calculates the weekly paycheck. You get paid time and a half if you work more than 40 hours
 
+hours_worked = 41
+hourly_rate = 10.00
+
+if hours_worked <= 40:
+    take_home = hours_worked * hourly_rate
+    print(f'This week I made ${take_home}.')
+else:
+    take_home = (hours_worked * hourly_rate) + ((40 - hours_worked) * (hourly_rate + (hourly_rate / 2)))
+    print(f'This week I made ${take_home}.')
+
+
+
+
+
+
 
 
