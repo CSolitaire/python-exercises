@@ -22,12 +22,11 @@ else:
     print ("Yee Haw! It's the weekend, party time!")
 
 
-#     create variables and make up values for
-#         the number of hours worked in one week
-#         the hourly rate
-#         how much the week's paycheck will be
-
-#     write the python code that calculates the weekly paycheck. You get paid time and a half if you work more than 40 hours
+#  Create variables and make up values for
+#  - the number of hours worked in one week
+#  - the hourly rate
+#  - how much the week's paycheck will be
+#  Write the python code that calculates the weekly paycheck. You get paid time and a half if you work more than 40 hours
 
 
 
