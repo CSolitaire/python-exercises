@@ -112,8 +112,13 @@ user_input_int = str(user_input)
 print (user_input_int)
 
 #Now i need to take that input and iterate through a list
-user_input = input("Please type an INT between 0 and 9")
-user_input_int = str(user_input)
+
+user_input = int(input("Please type an INT between 0 and 9"))
+for number in range(10):
+    print (user_input * number)
+
+user_input = int(input("Please type an INT between 0 and 9"))
 numbers = (1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
 for number in numbers:
-    print (user_input_int * number)
+    print(user_input * number)
+
