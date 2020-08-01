@@ -56,14 +56,24 @@ while i <= 15:
 i = 0
 while i <= 100:
   print(i)
+  print(" ")
   i += 2
-  
- 
 
+ #    C. This code puts a space between the numbers but not a new line 
 
 i = 0
 while i <= 100:
-  print(i)
-  i += 2 and '\n'
+  print(i," ",end=" ")
+  i += 2
+  
+#     D. Alter your loop to count backwards by 5's from 100 to -10.
+
+
+
+
+#     E. Create a while loop that starts at 2, and displays the number squared on each line while the number is less than 1,000,000. Output should equal:
+
 
   
+  
+
