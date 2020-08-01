@@ -50,7 +50,7 @@ while i <= 15:
     print(i)
     i += 1
 
-#     B. Create a loop that will count by 2's starting with 0 and ending at 100. 
+#     . Create a loop that will count by 2's starting with 0 and ending at 100. 
 #        Follow each number with a new line.
 
 i = 0
@@ -59,21 +59,32 @@ while i <= 100:
   print(" ")
   i += 2
 
- #    C. This code puts a space between the numbers but not a new line 
+ #    . This code puts a space between the numbers but not a new line 
 
 i = 0
 while i <= 100:
   print(i," ",end=" ")
   i += 2
   
-#     D. Alter your loop to count backwards by 5's from 100 to -10.
+#     . Alter your loop to count backwards by 5's from 100 to -10.
 
+i = 100
+while i >= -10:
+  print(i," ")
+  print( " ")
+  i -= 5
 
+#     . Create a while loop that starts at 2, and displays the number squared 
+#        on each line while the number is less than 1,000,000.
 
+i = 2
+while i <= 1_000_000:
+    print(i)
+    i *= i 
 
-#     E. Create a while loop that starts at 2, and displays the number squared on each line while the number is less than 1,000,000. Output should equal:
+#     . Write a loop that uses print to create the output shown below.
 
-
-  
+i = 105
+while i >= 10: i-= 5; print(i)
   
 
