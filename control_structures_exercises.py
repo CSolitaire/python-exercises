@@ -94,7 +94,6 @@ while i >= 10: i-= 5; print(i)
 #       then shows a multiplication table up through 10 for that number.
 
 
-
 # This changes the user input in to a string, it has to be
 # at the begining to work
 user_input = str(input("Please type an INT between 0 and 9"))
@@ -129,7 +128,7 @@ print(user_input_results[0])
 
 #Endproduct
 user_input = int(input("Please type an INT between 0 and 9"))
-numbers = (1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 user_input_results = [user_input * number for number in numbers]
 print(str(user_input) + " X " + str(numbers[0]) + " = " + str(user_input_results[0]))
 print(str(user_input) + " X " + str(numbers[1]) + " = " + str(user_input_results[1]))
