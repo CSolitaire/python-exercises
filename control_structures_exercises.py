@@ -127,9 +127,17 @@ print((user_input))
 print(numbers[0])
 print(user_input_results[0])
 
-
-
+#Endproduct
 user_input = int(input("Please type an INT between 0 and 9"))
 numbers = (1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
 user_input_results = [user_input * number for number in numbers]
 print(str(user_input) + " X " + str(numbers[0]) + " = " + str(user_input_results[0]))
+print(str(user_input) + " X " + str(numbers[1]) + " = " + str(user_input_results[1]))
+print(str(user_input) + " X " + str(numbers[2]) + " = " + str(user_input_results[2]))
+print(str(user_input) + " X " + str(numbers[3]) + " = " + str(user_input_results[3]))
+print(str(user_input) + " X " + str(numbers[4]) + " = " + str(user_input_results[4]))
+print(str(user_input) + " X " + str(numbers[5]) + " = " + str(user_input_results[5]))
+print(str(user_input) + " X " + str(numbers[6]) + " = " + str(user_input_results[6]))
+print(str(user_input) + " X " + str(numbers[7]) + " = " + str(user_input_results[7]))
+print(str(user_input) + " X " + str(numbers[8]) + " = " + str(user_input_results[8]))
+print(str(user_input) + " X " + str(numbers[9]) + " = " + str(user_input_results[9]))
