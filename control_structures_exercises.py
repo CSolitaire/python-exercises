@@ -90,7 +90,7 @@ while i >= 10: i-= 5; print(i)
 
 # B.For Loops
 
-#     . Write some code that prompts the user for a number, 
+#     i. Write some code that prompts the user for a number, 
 #       then shows a multiplication table up through 10 for that number.
 
 
@@ -140,3 +140,15 @@ print(str(user_input) + " X " + str(numbers[6]) + " = " + str(user_input_results
 print(str(user_input) + " X " + str(numbers[7]) + " = " + str(user_input_results[7]))
 print(str(user_input) + " X " + str(numbers[8]) + " = " + str(user_input_results[8]))
 print(str(user_input) + " X " + str(numbers[9]) + " = " + str(user_input_results[9]))
+
+
+#       ii. Create a for loop that uses print to create the output shown below.
+
+n_umber = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+for number in n_umber:
+    print(number * 1)
+
+i = 1
+while i < 10:
+    print(i + i)
+    i += 1
