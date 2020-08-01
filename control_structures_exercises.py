@@ -40,7 +40,7 @@ else:
 
 # 2. Loop Basics
 
-#     A. While
+# A. While Loops
 #         Create an integer variable i with a value of 5.
 #         Create a while loop that runs so long as i is less than or equal to 15
 #         Each loop iteration, output the current value of i, then increment i by one.
@@ -88,3 +88,32 @@ i = 105
 while i >= 10: i-= 5; print(i)
   
 
+# B.For Loops
+
+#     . Write some code that prompts the user for a number, 
+#       then shows a multiplication table up through 10 for that number.
+
+user_input = list(input("Please type an INT between 0 and 9"))
+table_count = 0
+numbers = (1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+while table_count < 10:
+    for number in numbers:
+        int(user_imput) * number
+
+
+var = 3
+num_3 = (3, 6, 9)
+for num in num_3:
+    print(var * num)
+
+# This changes the user input in to a string
+user_input = input("Please type an INT between 0 and 9")
+user_input_int = str(user_input)
+print (user_input_int)
+
+#Now i need to take that input and iterate through a list
+user_input = input("Please type an INT between 0 and 9")
+user_input_int = str(user_input)
+numbers = (1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+for number in numbers:
+    print (user_input_int * number)
