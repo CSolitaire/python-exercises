@@ -93,32 +93,43 @@ while i >= 10: i-= 5; print(i)
 #     . Write some code that prompts the user for a number, 
 #       then shows a multiplication table up through 10 for that number.
 
-user_input = list(input("Please type an INT between 0 and 9"))
-table_count = 0
-numbers = (1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
-while table_count < 10:
-    for number in numbers:
-        int(user_imput) * number
 
 
-var = 3
-num_3 = (3, 6, 9)
-for num in num_3:
-    print(var * num)
-
-# This changes the user input in to a string
-user_input = input("Please type an INT between 0 and 9")
-user_input_int = str(user_input)
+# This changes the user input in to a string, it has to be
+# at the begining to work
+user_input = str(input("Please type an INT between 0 and 9"))
 print (user_input_int)
 
 #Now i need to take that input and iterate through a list
-
 user_input = int(input("Please type an INT between 0 and 9"))
 for number in range(10):
     print (user_input * number)
 
+#It iterated but did not save values, now i need a list
 user_input = int(input("Please type an INT between 0 and 9"))
 numbers = (1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
-for number in numbers:
-    print(user_input * number)
+user_input_results = [user_input * number for number in numbers]
 
+#Now i think I need a formatted string for my answer...
+user_input = int(input("Please type an INT between 0 and 9"))
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+user_input_results = [user_input * number for number in numbers]
+i = 0
+while i >= 10:
+    print(f"{user_input} x {numbers[0]} = {user_input_results[0]}")
+    i += 1
+
+#Not formatted string, just variables converted back to string
+user_input = int(input("Please type an INT between 0 and 9"))
+numbers = (1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+user_input_results = [user_input * number for number in numbers]
+print((user_input))
+print(numbers[0])
+print(user_input_results[0])
+
+
+
+user_input = int(input("Please type an INT between 0 and 9"))
+numbers = (1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+user_input_results = [user_input * number for number in numbers]
+print(str(user_input) + " X " + str(numbers[0]) + " = " + str(user_input_results[0]))
