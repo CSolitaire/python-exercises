@@ -228,7 +228,7 @@ for num in range(1, 101):
 #     -Assume that the user will enter valid data.
 #     -Only continue if the user agrees to.
 
-tab_of_power = input( "Please enter an intiger" )
+tab_of_power = input( "Please enter an intiger")
 input_test = True
 while(input_test):
     if tab_of_power.isdigit():
@@ -241,13 +241,3 @@ for num in range(1, tab_of_power +1):
 
 
 
-pos_int = input("Please enter a positive intiger, i.e greather than 0")
-input_test = True
-while(input_test):
-    if pos_int.isdigit() and int(pos_int) >= 0:
-        break
-    else:
-        pos_int = input("That is NOT a positive intiger. Please try again.")
-pos_int = int(pos_int)
-for num in range(pos_int, 0 ,-1):
-    print (num)
