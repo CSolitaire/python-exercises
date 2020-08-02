@@ -198,3 +198,24 @@ while(input_test):
 pos_int = int(pos_int)
 for num in range(pos_int, 0 ,-1):
     print (num)
+
+# 3.Fizzbuzz
+
+#     One of the most common interview questions for entry-level programmers 
+#     is the FizzBuzz test. Developed by Imran Ghory, the test is designed to 
+#     test basic looping and conditional logic skills.
+
+#     -Write a program that prints the numbers from 1 to 100.
+#     -For multiples of three print "Fizz" instead of the number
+#     -For the multiples of five print "Buzz".
+#     -For numbers which are multiples of both three and five print "FizzBuzz".
+
+for num in range(1, 101):
+    if num % 15 == 0:
+        print("FizzBuzz")
+    elif num % 3 == 0:
+        print("Fizz")
+    elif num % 5 == 0:
+        print("Buzz")
+    else:
+        print(num)
