@@ -219,3 +219,35 @@ for num in range(1, 101):
         print("Buzz")
     else:
         print(num)
+
+# 4. Display a table of powers.
+
+#     -Prompt the user to enter an integer.
+#     -Display a table of squares and cubes from 1 to the value entered.
+#     -Ask if the user wants to continue.
+#     -Assume that the user will enter valid data.
+#     -Only continue if the user agrees to.
+
+tab_of_power = input( "Please enter an intiger" )
+input_test = True
+while(input_test):
+    if tab_of_power.isdigit():
+        break
+    else:
+        tab_of_power = input("That is NOT an intiger. Type in an intiger.")
+tab_of_power = int(tab_of_power)
+for num in range(1, tab_of_power +1):
+    print((num), (num * num), (num * num * num))
+
+
+
+pos_int = input("Please enter a positive intiger, i.e greather than 0")
+input_test = True
+while(input_test):
+    if pos_int.isdigit() and int(pos_int) >= 0:
+        break
+    else:
+        pos_int = input("That is NOT a positive intiger. Please try again.")
+pos_int = int(pos_int)
+for num in range(pos_int, 0 ,-1):
+    print (num)
