@@ -240,4 +240,15 @@ for num in range(1, tab_of_power +1):
     print((num), (num * num), (num * num * num))
 
 
-
+tab_of_power = input( "Please enter an intiger")
+input_test = True
+while(input_test):
+    if tab_of_power.isdigit():
+        break
+    else:
+        tab_of_power = input("That is NOT an intiger. Type in an intiger.")
+tab_of_power = int(tab_of_power)
+for num in range(1, tab_of_power +1):
+    print( "Number"     "Squared"       "Cubed")
+    print( "-----------------------------------")
+    print("|" str.(num), "|" str.(num * num), "|" str.(num * num * num))
