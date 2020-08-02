@@ -144,6 +144,33 @@ print(str(user_input) + " X " + str(numbers[9]) + " = " + str(user_input_results
 
 #       ii. Create a for loop that uses print to create the output shown below.
 
-for i in range(10):
+for i in range(1,10):
     print(str(i) * i)
+
+# C. break and continue
+
+#       i. Prompt the user for an odd number between 1 and 50. 
+#          Use a loop and a break statement to continue prompting the user 
+#          if they enter invalid input. (Hint: use the isdigit method on strings 
+#          to determine this). Use a loop and the continue statement to output all 
+#          the odd numbers between 1 and 50, except for the number the user entered.
+
+
+odd_num = input( "Please enter an odd number between 1 and 50." )
+input_test = True
+while(input_test):
+    if odd_num.isdigit() and int(odd_num) % 2 == 1:
+        break
+    else:
+        odd_num = input("That is NOT an odd number. Please try again.")
+odd_num = int(odd_num)
+print(f"You chose the odd number {odd_num}")
+
+
+# D.    The input function can be used to prompt for input and use that input 
+#       in your python code. Prompt the user to enter a positive number and write 
+#       a loop that counts from 0 to that number. (Hints: first make sure that the
+#       value the user entered is a valid number, also note that the input function
+#       returns a string, so you'll need to convert this to a numeric type.)
+
 
