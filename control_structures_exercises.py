@@ -144,11 +144,14 @@ print(str(user_input) + " X " + str(numbers[9]) + " = " + str(user_input_results
 
 #       ii. Create a for loop that uses print to create the output shown below.
 
-n_umber = [1, 2, 3, 4, 5, 6, 7, 8, 9]
-for number in n_umber:
-    print(number * 1)
+
 
 i = 1
-while i < 10:
-    print(i + i)
-    i += 1
+while i < 10: i+= 1; print(i + 1)
+
+# Below is an example statment
+i = 105
+while i >= 10: i-= 5; print(i)
+
+try_list = [1, 2, 3]
+
