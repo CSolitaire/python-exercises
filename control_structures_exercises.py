@@ -187,3 +187,14 @@ for num in range(0, pos_num + 1):
 
 # E.    Write a program that prompts the user for a positive integer. Next write a 
 #       loop that prints out the numbers from the number the user entered down to 1.
+
+pos_int = input("Please enter a positive intiger, i.e greather than 0")
+input_test = True
+while(input_test):
+    if pos_int.isdigit() and int(pos_int) >= 0:
+        break
+    else:
+        pos_int = input("That is NOT a positive intiger. Please try again.")
+pos_int = int(pos_int)
+for num in range(pos_int, 0 ,-1):
+    print (num)
