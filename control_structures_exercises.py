@@ -173,4 +173,17 @@ print(f"You chose the odd number {odd_num}")
 #       value the user entered is a valid number, also note that the input function
 #       returns a string, so you'll need to convert this to a numeric type.)
 
+pos_num = input("Please enter a positive number, i.e greather than 0")
+input_test = True
+while(input_test):
+    if pos_num.isdigit() and int(pos_num) >= 0:
+        break
+    else:
+        pos_num = input("That is NOT a positive number. Please try again.")
+pos_num = int(pos_num)
+for num in range(0, pos_num + 1):
+    print (num)
+           
 
+# E.    Write a program that prompts the user for a positive integer. Next write a 
+#       loop that prints out the numbers from the number the user entered down to 1.
