@@ -270,3 +270,40 @@ print( "Number" + "  |  " + "Squared" + "  |  " + "Cubed")
 print( "----------------------------")
 for num in range(1, tab_of_power +1):
     print("   "+str(num)+"    |    "+str(num * num)+"      |    "+str(num * num * num))
+
+
+# 6. Create a list of dictionaries where each dictionary represents a book that you have read. 
+# Each dictionary in the list should have the keys title, author, and genre. 
+# Loop through the list and print out information about each book.
+
+books = [
+{
+"title" : "Encounters with the arch druid",
+"author": "John McPhee",
+"genre" : "Non Fiction",
+},
+{
+"title" : "Basin and Range",
+"author": "John McPhee",
+"genre" : "Non Fiction",
+},
+{
+"title" : "Control of Nature",
+"author": "John McPhee",
+"genre" : "Non Fiction",
+}]
+
+[x for x in books]
+
+#Prompt the user to enter a genre, 
+#then loop through your books list and print out the titles of all 
+# the books in that genre.
+
+while genre not in [x["genre"] for x in books]:
+    genre = input("No Matches, Try again")
+    if genre in [x["genre"] for x in books]:
+        break
+    
+for x in books:
+    if genre == x["genre"]:
+        print(f'" {title} is classifed in the genre of {genre}") 
