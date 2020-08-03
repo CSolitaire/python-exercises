@@ -280,27 +280,27 @@ books = [
 {
 "title" : "Encounters with the arch druid",
 "author": "John McPhee",
-"genre" : "Non Fiction",
+"genre" : "non fiction",
 },
 {
 "title" : "Pet Cemetary",
 "author": "Stephen King",
-"genre" : "Horror",
+"genre" : "horror",
 },
 {
 "title" : "Basin and Range",
 "author": "John McPhee",
-"genre" : "Non Fiction",
+"genre" : "non fiction",
 },
 {
 "title" : "Cat in Hat",
 "author": "Dr. Seuss",
-"genre" : "Fiction",
+"genre" : "fiction",
 },
 {
 "title" : "Control of Nature",
 "author": "John McPhee",
-"genre" : "Non Fiction",
+"genre" : "non fiction",
 }]
 
 [x for x in books]
@@ -320,3 +320,16 @@ for x in books:
     if gen == x["genre"]:
         print('\n{} is of the genre {}'.format(x['title'], gen))
 
+
+## Need to add functionality for imperfect user input
+
+gen = input("Please select a genre")
+
+while gen not in [x["genre"] for x in books]:
+    gen = input("No Matches, Try again")
+    if gen in [x["genre"] for x in books]:
+        break
+
+for x in books:
+    if gen == x["genre"]:
+        print('\n{} is of the genre {}'.format(x['title'], gen))
