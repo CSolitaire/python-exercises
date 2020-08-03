@@ -246,7 +246,7 @@ tab_of_power = int(tab_of_power)
 for num in range(1, tab_of_power +1):
     print((num), (num * num), (num * num * num))
 
-# Improved formatting
+# Improved formatting Heading, Horizontal Line, Alignment
 
 tab_of_power = input( "Please enter an intiger")
 input_test = True
@@ -259,8 +259,8 @@ tab_of_power = int(tab_of_power)
 print( "Number" + "    " + "Squared" + "    " + "Cubed")
 print( "--------------------------")
 for num in range(1, tab_of_power +1):
-    print("     "+str(num)+"         "+str(num * num)+"         "+str(num * num * num))
-break
+    print("   "+str(num)+"         "+str(num * num)+"         "+str(num * num * num))
+
 
 
 
