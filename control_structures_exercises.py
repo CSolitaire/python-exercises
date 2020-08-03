@@ -283,9 +283,19 @@ books = [
 "genre" : "Non Fiction",
 },
 {
+"title" : "Pet Cemetary",
+"author": "Stephen King",
+"genre" : "Horror",
+},
+{
 "title" : "Basin and Range",
 "author": "John McPhee",
 "genre" : "Non Fiction",
+},
+{
+"title" : "Cat in Hat",
+"author": "Dr. Seuss",
+"genre" : "Fiction",
 },
 {
 "title" : "Control of Nature",
@@ -299,11 +309,14 @@ books = [
 #then loop through your books list and print out the titles of all 
 # the books in that genre.
 
-while genre not in [x["genre"] for x in books]:
-    genre = input("No Matches, Try again")
-    if genre in [x["genre"] for x in books]:
+gen = input("Please select a genre")
+
+while gen not in [x["genre"] for x in books]:
+    gen = input("No Matches, Try again")
+    if gen in [x["genre"] for x in books]:
         break
-    
+
 for x in books:
-    if genre == x["genre"]:
-        print(f'" {title} is classifed in the genre of {genre}") 
+    if gen == x["genre"]:
+        print('\n{} is of the genre {}'.format(x['title'], gen))
+
