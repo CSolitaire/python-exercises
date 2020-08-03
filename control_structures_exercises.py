@@ -272,6 +272,55 @@ for num in range(1, tab_of_power +1):
     print("   "+str(num)+"    |    "+str(num * num)+"      |    "+str(num * num * num))
 
 
+
+#  5.Convert given number grades into letter grades.
+#    Prompt the user for a numerical grade from 0 to 100.
+#    Display the corresponding letter grade.
+#    Prompt the user to continue.
+#    Assume that the user will enter valid integers for the grades.
+#    The application should only continue if the user agrees to.
+# Grade Ranges:
+# A : 100 - 88
+# B : 87 - 80
+# C : 79 - 67
+# D : 66 - 60
+# F : 59 - 0
+
+usercon = 'y'
+while usercon.lower() == 'y':
+    grade = int(input('Please enter a grade: '))
+    if grade >= 99 and grade <= 100:
+        print('\n',f'{grade} is an A+!','\n')
+    elif grade >= 90:
+        print('\n',f'{grade} is an A!','\n')
+    elif grade >= 88:
+        print('\n',f'{grade} is an A-!','\n')
+    elif grade >= 86:
+        print('\n',f'{grade} is a B+!','\n')
+    elif grade >= 82:
+        print('\n',f'{grade} is a B!','\n')
+    elif grade >= 80:
+        print('\n',f'{grade} is a B-!','\n')
+    elif grade >= 78:
+        print('\n',f'{grade} is a C+!','\n')
+    elif grade >= 69:
+        print('\n',f'{grade} is a C!','\n')
+    elif grade >= 67:
+        print('\n',f'{grade} is a C-!','\n')
+    elif grade >= 65:
+        print('\n',f'{grade} is a D+!','\n')
+    elif grade >= 62:
+        print('\n',f'{grade} is a D!','\n')
+    elif grade >= 60:
+        print('\n',f'{grade} is a D-!','\n')
+    elif grade <= 59:
+        print('\n',f'{grade} is an F!','\n')
+    else:
+        print('you did not enter a grade between 1-100')
+    usercon = input('Would you like to continue? "y" for yes. "n" for no ')
+
+
+
 # 6. Create a list of dictionaries where each dictionary represents a book that you have read. 
 # Each dictionary in the list should have the keys title, author, and genre. 
 # Loop through the list and print out information about each book.
