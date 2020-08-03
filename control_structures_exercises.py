@@ -286,23 +286,23 @@ for num in range(1, tab_of_power +1):
 # D : 66 - 60
 # F : 59 - 0
 
+
 prompt = "y"
 while prompt.lower() == "y":
     grade = int(input("Please enter a numerical grade from 0 to 100"))
-    if grade >= 99 and grade <= 100:
+    if grade >= 88:
         print("\n",f"{grade} is an A","\n")
-    elif grade >= 88 and <= 80:
+    elif grade >= 80 and  grade < 88:
         print("\n",f"{grade} is a B","\n")
-    elif grade >= 80 and <= 67:
+    elif grade >= 67 and grade < 80:
         print("\n",f"{grade} is a C","\n")
-    elif grade >= 67 and <= 60:
+    elif grade >= 60 and grade < 67:
         print("\n",f"{grade} is a D","\n")
-    elif grade >= 60:
+    elif grade < 60:
         print("\n",f"{grade} is an F","\n")
     else:
         print("That is not a grade between 1-100")
     promt = input('Would you like to continue? "y" for yes. "n" for no ')
-
 
 
 # 6. Create a list of dictionaries where each dictionary represents a book that you have read. 
