@@ -27,8 +27,8 @@ else:
 #  - how much the week's paycheck will be
 #  Write the python code that calculates the weekly paycheck. You get paid time and a half if you work more than 40 hours
 
-hours_worked = 41
-hourly_rate = 10.00
+hours_worked = 51
+hourly_rate = 15.00
 
 if hours_worked <= 40:
     take_home = hours_worked * hourly_rate
@@ -59,12 +59,6 @@ while i <= 100:
   print(" ")
   i += 2
 
- #    . This code puts a space between the numbers but not a new line 
-
-i = 0
-while i <= 100:
-  print(i," ",end=" ")
-  i += 2
   
 #     . Alter your loop to count backwards by 5's from 100 to -10.
 
@@ -235,6 +229,7 @@ for num in range(1, 101):
 #     -Assume that the user will enter valid data.
 #     -Only continue if the user agrees to.
 
+# First lets make the numbers work
 tab_of_power = input( "Please enter an intiger")
 input_test = True
 while(input_test):
@@ -261,7 +256,7 @@ print( "--------------------------")
 for num in range(1, tab_of_power +1):
     print("   "+str(num)+"         "+str(num * num)+"         "+str(num * num * num))
 
-# Addition of vertical lines for partitions
+# Addition of vertical lines for partitions(Final)
 
 tab_of_power = input( "Please enter an intiger")
 input_test = True
