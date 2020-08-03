@@ -259,4 +259,8 @@ tab_of_power = int(tab_of_power)
 print( "Number" + "    " + "Squared" + "    " + "Cubed")
 print( "--------------------------")
 for num in range(1, tab_of_power +1):
-    print((num), (num * num), (num * num * num))
+    print("     "+str(num)+"         "+str(num * num)+"         "+str(num * num * num))
+break
+
+
+
