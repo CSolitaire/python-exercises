@@ -156,15 +156,22 @@ for i in range(1,10):
 #          the odd numbers between 1 and 50, except for the number the user entered.
 
 
-odd_num = input( "Please enter an odd number between 1 and 50." )
-input_test = True
-while(input_test):
-    if odd_num.isdigit() and int(odd_num) % 2 == 1:
-        break
-    else:
-        odd_num = input("That is NOT an odd number. Please try again.")
-odd_num = int(odd_num)
-print(f"You chose the odd number {odd_num}")
+number = input('please input an odd number between 1 and 50: ')
+
+for x in range(1,51,2):
+    while number.isdigit() == False or int(number) < 1 or int(number) > 50 or int(number) % 2 == 0:
+        print('\nYou must enter an odd number between 1 and 50. Try again.\n')
+        number = input('please input an odd number between 1 and 50: ')
+        if number.isdigit() == True and int(number) >= 1 and int(number) < 50 and int(number) % 2 == 1:
+            print('\n', number, 'is the number to skip\n')
+            break
+            
+    if x == int(number):
+        print('Yikes! Skipping number:', x)
+        continue
+       
+        
+    print('Here is an odd number:', x)
 
 
 # D.    The input function can be used to prompt for input and use that input 
