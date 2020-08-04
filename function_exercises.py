@@ -113,7 +113,7 @@ def handle_commas(number_with_comma):
     for char in number_with_comma:
         if char == ",":
             number_with_comma = number_with_comma.replace(char, "")
-    return int(number_with_comma)
+    return float(number_with_comma)
 
 
 handle_commas(2)
@@ -154,9 +154,21 @@ get_letter_grade(60)
 
 
 
-    # 9. Define a function named remove_vowels that accepts a string and returns a string with all the vowels removed.
+    # 9. Define a function named remove_vowels that accepts a string and returns a string 
+    #    with all the vowels removed.
 
+def remove_vowels (word):
+    assert type(word) == str, "Invalid Input"
+    vowels = ("a", "e", "i", "o", "u")
+    for letter in word:
+        if letter in vowels:
+            word = word.replace(letter, "")
+    return word
 
+remove_vowels (34)
+remove_vowels ("Pineapple")
+remove_vowels ("Superman")
+remove_vowels ("ardvark")
 
     # 10. Define a function named normalize_name. It should accept a string and return a valid python identifier, that is:
     #     - anything that is not a valid python identifier should be removed
