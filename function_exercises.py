@@ -75,14 +75,18 @@ capitalize(4.5)
     # 5. Define a function named calculate_tip. It should accept a tip percentage 
     #    (a number between 0 and 1) and the bill total, and return the amount to tip.
 
-def calculate_tip(tip_percent):
+def calculate_tip(tip_percent, bill):
     assert type(tip_percent) == int or type(tip_percent) == float, "Invalid Input"
+    assert type(bill) == float, "Invalid Input"
+    tip = bill * tip_percent
+    return print(f" You should tip ${tip}")
 
 
-
-calculate_tip("orange")
-calculate_tip(2)
-calculate_tip(3.7)
+calculate_tip("orange", 2)
+calculate_tip(2, "orange")
+calculate_tip(0, 35.00)
+calculate_tip(0.20, 35.00)
+calculate_tip(0.05, 35.00)
 
 
     # 6. Define a function named apply_discount. It should accept a original price, and a discount percentage, 
