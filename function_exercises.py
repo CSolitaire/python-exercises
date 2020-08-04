@@ -18,10 +18,21 @@ is_two(2.1)
 is_two("two")
 
 
-
     # 2. Define a function named is_vowel. It should return True if the passed string is a vowel, False otherwise.
 
+def is_vowel(i):
+    if type(i) != int:
+        if i in "aeiouAEIOU":
+            return True
+        else:
+            return False
+    else:
+        return False
 
+is_vowel("a")
+is_vowel("E")
+is_vowel(2)
+is_vowel("Apple")
 
     # 3. Define a function named is_consonant. It should return True if the passed string is a consonant, False otherwise. 
     #    Use your is_vowel function to accomplish this.
