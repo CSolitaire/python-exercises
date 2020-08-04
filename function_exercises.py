@@ -170,7 +170,8 @@ remove_vowels ("Pineapple")
 remove_vowels ("Superman")
 remove_vowels ("ardvark")
 
-    # 10. Define a function named normalize_name. It should accept a string and return a valid python identifier, that is:
+    # 10. Define a function named normalize_name. It should accept a string and return a 
+    #     valid python identifier, that is:
     #     - anything that is not a valid python identifier should be removed
     #     - leading and trailing whitespace should be removed
     #     - everything should be lowercase
@@ -180,6 +181,25 @@ remove_vowels ("ardvark")
     #         First Name will become first_name
     #         % Completed will become completed
 
+
+def normalize_name(text):
+    assert type(text) == str, "Invalid Input"
+    new_string = (text.strip("0123456789 ").lower().replace(" ", "_"))   
+    output = ""                                                     
+    for i in new_string:
+        if i not in "!@#$%^&*()+=-[]{}\/|?.<>,`~":                    
+            output += i                                              
+    return(output)
+
+
+normalize_name("    bye   ")
+normalize_name("Name")
+normalize_name("First Name")
+normalize_name("% Completed")
+
+hi = "hello world"
+hi = hi.replace(" ", "_")
+print(hi)
 
 
     # 11. Write a function named cumulative_sum that accepts a list of numbers and returns a list that is the cumulative sum of the numbers in the list.
