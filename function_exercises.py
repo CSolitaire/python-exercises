@@ -27,7 +27,6 @@ is_two(2.0)
 is_two(2.1)
 is_two("two")
 is_two("tWO")
-
 ______________________________________________________________________________________
 # 2. Define a function named is_vowel. It should return True if the passed string is a vowel, 
 #    False otherwise.
@@ -46,7 +45,6 @@ def is_vowel(i):
     else:
         return False
 
-
 is_vowel("a")
 is_vowel("E")
 is_vowel(2)
@@ -56,20 +54,23 @@ ________________________________________________________________________________
     #    It should return True if the passed string is a consonant, False otherwise. 
     #    Use your is_vowel function to accomplish this.
 ______________________________________________________________________________________
+
+# is_consonant defines a single parameter (i), which is a string.  It will return a boolean value True or False
 def is_consonant(i):
+# I am calling the previous function is_vowel to validate the parameter(i) 
     if is_vowel(i) == False:
+# if is_vowel is False, is_consonant will return True        
        return True
+# if is_vowel is True, is_consonant will return False
     else:
         return False
 
- 
 is_consonant("a")
 is_consonant("E")
 is_consonant(2)
 is_consonant("Apple")
 is_consonant("c")
 is_consonant("z")
-
 ______________________________________________________________________________________
     # 4. Define a function that accepts a string that is a word. The function should capitalize 
     #    the first letter of the word
