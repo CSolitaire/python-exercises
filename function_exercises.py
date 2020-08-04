@@ -89,10 +89,21 @@ calculate_tip(0.20, 35.00)
 calculate_tip(0.05, 35.00)
 
 
-    # 6. Define a function named apply_discount. It should accept a original price, and a discount percentage, 
-    #    and return the price after the discount is applied.
+    # 6. Define a function named apply_discount. It should accept a original price, 
+    #    and a discount percentage, and return the price after the discount is applied.
 
+def apply_discount(original_price, discount_percent):
+    assert type(original_price) == int or type(original_price) == float, "Invalid Input"
+    assert type(discount_percent) == float, "Invalid Input"
+    discount_amount = original_price * discount_percent
+    final_price = original_price - discount_amount
+    return print(f"The price after discount is\n ${final_price}")
 
+apply_discount("orange", 2)
+apply_discount(2, "orange")
+apply_discount(25.00, .03)
+apply_discount(25, 0.75)
+apply_discount(3, 1)
 
     # 7. Define a function named handle_commas. It should accept a string that is a number that contains commas 
     #    in it as input, and return a number as output.
