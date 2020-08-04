@@ -1,2 +1,2 @@
 # python-exercises
-Python Expercises are fun for all!
+Python Exercises are fun for all!
