@@ -202,6 +202,20 @@ hi = hi.replace(" ", "_")
 print(hi)
 
 
-    # 11. Write a function named cumulative_sum that accepts a list of numbers and returns a list that is the cumulative sum of the numbers in the list.
+    # 11. Write a function named cumulative_sum that accepts a list of numbers 
+    #     and returns a list that is the cumulative sum of the numbers in the list.
     #     cumulative_sum([1, 1, 1]) returns [1, 2, 3]
     #     cumulative_sum([1, 2, 3, 4]) returns [1, 3, 6, 10]
+
+def cumulative_sum(lists):  
+    assert type(lists) == list, "Invalid Input"
+    cu_list = []  
+    length = len(lists)  
+    cu_list = [sum(lists[0:x:1]) for x in range(0, length+1)]  
+    return cu_list[1:] 
+
+cumulative_sum([1, 1, 1]) 
+cumulative_sum([1, 2, 3, 4])
+
+
+
