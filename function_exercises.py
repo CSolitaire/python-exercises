@@ -53,9 +53,23 @@ is_consonant("c")
 is_consonant("z")
 
 
-    # 4. Define a function that accepts a string that is a word. The function should capitalize the first letter of the word
+    # 4. Define a function that accepts a string that is a word. The function should capitalize 
+    #    the first letter of the word
     #    if the word starts with a consonant.
 
+def capitalize (word):
+    assert type(word) == str, "Invalid Input"
+    splitstring = word.split()
+    for letter in splitstring:
+        if is_consonant(letter[0]):
+            return word.capitalize()
+        else:
+            return word
+
+capitalize("house")
+capitalize(3)
+capitalize("acre")
+capitalize(4.5)
 
 
     # 5. Define a function named calculate_tip. It should accept a tip percentage (a number between 0 and 1) 
