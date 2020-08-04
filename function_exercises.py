@@ -72,9 +72,17 @@ capitalize("acre")
 capitalize(4.5)
 
 
-    # 5. Define a function named calculate_tip. It should accept a tip percentage (a number between 0 and 1) 
-    #    and the bill total, and return the amount to tip.
+    # 5. Define a function named calculate_tip. It should accept a tip percentage 
+    #    (a number between 0 and 1) and the bill total, and return the amount to tip.
 
+def calculate_tip(tip_percent):
+    assert type(tip_percent) == int or type(tip_percent) == float, "Invalid Input"
+
+
+
+calculate_tip("orange")
+calculate_tip(2)
+calculate_tip(3.7)
 
 
     # 6. Define a function named apply_discount. It should accept a original price, and a discount percentage, 
