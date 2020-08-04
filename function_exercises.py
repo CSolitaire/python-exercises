@@ -120,7 +120,37 @@ handle_commas(2)
 handle_commas("2,0")
 handle_commas("2,000")
 
-    # 8. Define a function named get_letter_grade. It should accept a number and return the letter grade associated with that number (A-F).
+    # 8. Define a function named get_letter_grade. It should accept a number and return 
+    #    the letter grade associated with that number (A-F).
+# Grade Ranges:
+
+#     A : 100 - 88
+#     B : 87 - 80
+#     C : 79 - 67
+#     D : 66 - 60
+#     F : 59 - 0
+
+
+    def get_letter_grade(number):
+        assert type(number) == int or type(number) == float, "Invalid Input"
+        if number >= 88:
+            return print(" That score is associated with the letter grade 'A'")
+
+        elif number >= 80 and number < 88:
+            return print(" That score is associated with the letter grade 'B'")
+
+        elif number >= 67 and number < 80:
+            return print(" That score is associated with the letter grade 'C'")
+
+        elif number >= 60 and number < 67:
+            return print(" That score is associated with the letter grade 'D'")
+        else:
+            return print(" That score is associated with the letter grade 'F'")
+        
+get_letter_grade(78)
+get_letter_grade(56.8)
+get_letter_grade(94.4)
+get_letter_grade(60)
 
 
 
