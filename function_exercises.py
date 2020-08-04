@@ -11,10 +11,11 @@ def is_two(x):
         2.0, 
         "two", 
         "TWO", 
-        "Two"
+        "Two",
         "TWo",
-        "TwO"
-        "tWO"):
+        "TwO",
+        "tWO",
+        "2"):
 # if passed argument is in set return True
         return True
 # if passed argument is not in set return False     
@@ -27,6 +28,7 @@ is_two(2.0)
 is_two(2.1)
 is_two("two")
 is_two("tWO")
+assert type(is_two(2)) == bool
 ______________________________________________________________________________________
 # 2. Define a function named is_vowel. It should return True if the passed string is a vowel, 
 #    False otherwise.
