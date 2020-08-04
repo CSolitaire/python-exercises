@@ -105,10 +105,20 @@ apply_discount(25.00, .03)
 apply_discount(25, 0.75)
 apply_discount(3, 1)
 
-    # 7. Define a function named handle_commas. It should accept a string that is a number that contains commas 
-    #    in it as input, and return a number as output.
+    # 7. Define a function named handle_commas. It should accept a string that is a number 
+    #    that contains commas in it as input, and return a number as output.
+
+def handle_commas(number_with_comma):
+    assert type(number_with_comma) == str, "Invalid Input"
+    for char in number_with_comma:
+        if char == ",":
+            number_with_comma = number_with_comma.replace(char, "")
+    return int(number_with_comma)
 
 
+handle_commas(2)
+handle_commas("2,0")
+handle_commas("2,000")
 
     # 8. Define a function named get_letter_grade. It should accept a number and return the letter grade associated with that number (A-F).
 
