@@ -87,12 +87,60 @@ def ave_total_active_user():
 
 ave_total_active_user()
 
-
 #     - User with the lowest balance
+def lowest_balance():
+        balance = min([i['balance'] for x in data])
+        name = [i['name'] for i in data if i['balance'] == min([i['balance'] for i in data])]
+        return print(f"{name} has the lowest account balance with {balance}")
 
+lowest_balance()
 
+ #     - User with the highest balance
+ def highest_balance():
+        balance = min([i['balance'] for x in data])
+        name = [i['name'] for i in data if i['balance'] == max([i['balance'] for i in data])]
+        print(f"{name} has the highest account balance with {balance}")
 
-        #     - User with the highest balance
-        #     - Most common favorite fruit
-        #     - Least most common favorite fruit
+highest_balance()
+
+#     - Most common favorite fruit
+
+[i['favoriteFruit'] for i in data] #shows me the fruit in the dataset, there are only 3 fruits identified
+
+def fav_fruit():
+        s = 0        
+        b = 0
+        a = 0
+        for x in data:
+                if x['favoriteFruit'] == 'strawberry':  
+                        s += 1
+                if x['favoriteFruit'] == 'banana':
+                        b += 1
+                if x['favoriteFruit'] == 'apple':
+                        a += 1
+        fruits = [{'fruit' : 'strawberry', 'count' : s}, {'fruit' : 'banana', 'count' : b}, {'fruit' : 'apple', 'count' : a}]   
+        total_count = (max([x['count'] for x in fruits]), max([x['fruit'] for x in fruits]))  
+        return total_count
+
+fav_fruit()
+
+#     - Least most common favorite fruit
+
+def least_fav_fruit():
+        s = 0        
+        b = 0
+        a = 0
+        for x in data:
+                if x['favoriteFruit'] == 'strawberry':  
+                        s += 1
+                if x['favoriteFruit'] == 'banana':
+                        b += 1
+                if x['favoriteFruit'] == 'apple':
+                        a += 1
+        fruits = [{'fruit' : 'strawberry', 'count' : s}, {'fruit' : 'banana', 'count' : b}, {'fruit' : 'apple', 'count' : a}]   
+        total_count = (min([x['count'] for x in fruits]), min([x['fruit'] for x in fruits]))  
+        return total_count
+
+least_fav_fruit()
+
         #     - Total number of unread messages for all users
