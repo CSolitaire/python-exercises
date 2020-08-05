@@ -145,8 +145,9 @@ least_fav_fruit()
 
 #     - Total number of unread messages for all users
 
-unread_m = [int(i['greeting'].lower().strip("abcdefghijklmonpqrstuvwxyz!,. ")) for i in data if 'unread' in i['greeting']] 
+def total_unread():
+        unread_m = [int(i["greeting"].lower().strip("abcdefghijklmonpqrstuvwxyz!,. ")) for i in data if "unread" in i["greeting"]] 
+        total_m = sum(unread_m)
+        return print(f"there are a total of {total_m} unread messages") 
 
-total_m = sum(unread_m)
-
-print(f'there are a total of {total_m} unread messages for all users') 
+total_unread()
