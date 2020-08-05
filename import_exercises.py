@@ -32,23 +32,66 @@ from itertools import * # import itertools
 print(list(permutations('abcd', 2))) #Repeated sets, unique locations in set
 print(list(combinations('abcd', 2))) #unique sets of values, unique locations in set
 
-#     3. Save this file as profiles.json inside of your exercises directory. Use the load function from the json module to open this file, 
-#        it will produce a list of dictionaries. Using this data, write some code that calculates and outputs the following information:
+#     3. Save this file as profiles.json inside of your exercises directory. 
+#        Use the load function from the json module to open this file, 
+#        it will produce a list of dictionaries. Using this data, write some code 
+#        that calculates and outputs the following information:
 
 
-from json import * 
-f = open('profiles.json') 
-data = json.load(f)
+import json
+with open('profiles.json') as f:
+        data = json.load(f)
+
+[x for x in data]
+#     - Total number of users
+
+def total_users():
+        return len([i['_id'] for i in data])
+
+total_users()
+        
+
+#     - Number of active users
+
+def active_users():
+        return len([i['_id'] for i in data if i['isActive'] == True])
+
+active_users()
+
+#     - Number of inactive users
+
+def inactive_users():
+        return len([i['_id'] for i in data if i['isActive'] == False])
+
+inactive_users()
+
+#     - Grand total of balances for all users
+
+def total_balance():
+        total = 0
+        for i in data:
+                total += float(i['balance'].replace(",", '').replace("$", ""))  
+        return total
+
+total_balance()
+
+#     - Average balance per user
+
+def ave_total_all_user():
+        return total_balance() / total_users()
+
+ave_total_all_user()
+
+def ave_total_active_user():
+        return total_balance() / active_users()
+
+ave_total_active_user()
 
 
-# 
-# 
-#     #     - Total number of users
-        #     - Number of active users
-        #     - Number of inactive users
-        #     - Grand total of balances for all users
-        #     - Average balance per user
-        #     - User with the lowest balance
+#     - User with the lowest balance
+
+
+
         #     - User with the highest balance
         #     - Most common favorite fruit
         #     - Least most common favorite fruit
