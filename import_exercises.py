@@ -6,7 +6,16 @@
 #         - use from to import the function directly
 #         - use from and give the function a different name
 
+x = -5
+import math
+math.fabs(x)
 
+x = [2,3,4,5]
+import statistics as s
+s.mean(x)
+
+from time import ctime as ct
+ct()
 
 
 #     2. For the following exercises, read about and use the itertools module from the standard library to help you solve the problem.
