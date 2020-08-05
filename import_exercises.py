@@ -6,35 +6,44 @@
 #         - use from to import the function directly
 #         - use from and give the function a different name
 
-x = -5
-import math
-math.fabs(x)
-
-x = [2,3,4,5]
-import statistics as s
-s.mean(x)
-
-from time import ctime as ct
-ct()
-
 import function_exercises
-
 function_exercises.is_two(2)
 
+import function_exercises as fe
+fe.is_vowel('a')
+
+from function_exercises import is_consonant as c
+c('a')
 
 #     2. For the following exercises, read about and use the itertools module from the 
 #        standard library to help you solve the problem.
 #           - How many different ways can you combine the letters from "abc" with the numbers 1, 2, and 3?
 #           - How many different ways can you combine two of the letters from "abcd"?
 
+#  - How many different ways can you combine the letters from "abc" with the numbers 1, 2, and 3?
 
-x = itertools.combinations('abc', 3)
-print(x)
+from itertools import *
+abc = list(product('abc', '123'))
+print(abc)
 
+# - How many different ways can you combine two of the letters from "abcd"?
+
+from itertools import * # import itertools
+print(list(permutations('abcd', 2))) #Repeated sets, unique locations in set
+print(list(combinations('abcd', 2))) #unique sets of values, unique locations in set
 
 #     3. Save this file as profiles.json inside of your exercises directory. Use the load function from the json module to open this file, 
 #        it will produce a list of dictionaries. Using this data, write some code that calculates and outputs the following information:
-#       #     - Total number of users
+
+
+from json import * 
+f = open('profiles.json') 
+data = json.load(f)
+
+
+# 
+# 
+#     #     - Total number of users
         #     - Number of active users
         #     - Number of inactive users
         #     - Grand total of balances for all users
