@@ -156,21 +156,21 @@ ________________________________________________________________________________
 #     F : 59 - 0
 ______________________________________________________________________________________
 
-    def get_letter_grade(number):
-        assert type(number) == int or type(number) == float, "Invalid Input"
-        if number >= 88:
-            return print(" That score is associated with the letter grade 'A'")
+def get_letter_grade(number):
+     assert type(number) == int or type(number) == float, "Invalid Input"
+     if number >= 88:
+        return print(" That score is associated with the letter grade 'A'")
 
-        elif number >= 80 and number < 88:
-            return print(" That score is associated with the letter grade 'B'")
+     elif number >= 80 and number < 88:
+        return print(" That score is associated with the letter grade 'B'")
 
-        elif number >= 67 and number < 80:
-            return print(" That score is associated with the letter grade 'C'")
+     elif number >= 67 and number < 80:
+        return print(" That score is associated with the letter grade 'C'")
 
-        elif number >= 60 and number < 67:
-            return print(" That score is associated with the letter grade 'D'")
-        else:
-            return print(" That score is associated with the letter grade 'F'")
+     elif number >= 60 and number < 67:
+        return print(" That score is associated with the letter grade 'D'")
+     else:
+        return print(" That score is associated with the letter grade 'F'")
         
 get_letter_grade(78)
 get_letter_grade(56.8)

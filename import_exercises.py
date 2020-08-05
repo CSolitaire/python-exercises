@@ -17,12 +17,19 @@ s.mean(x)
 from time import ctime as ct
 ct()
 
+import function_exercises
 
-#     2. For the following exercises, read about and use the itertools module from the standard library to help you solve the problem.
+function_exercises.is_two(2)
+
+
+#     2. For the following exercises, read about and use the itertools module from the 
+#        standard library to help you solve the problem.
 #           - How many different ways can you combine the letters from "abc" with the numbers 1, 2, and 3?
 #           - How many different ways can you combine two of the letters from "abcd"?
 
 
+x = itertools.combinations('abc', 3)
+print(x)
 
 
 #     3. Save this file as profiles.json inside of your exercises directory. Use the load function from the json module to open this file, 
