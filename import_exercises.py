@@ -112,14 +112,14 @@ def fav_fruit():
         b = 0
         a = 0
         for x in data:
-                if x['favoriteFruit'] == 'strawberry':  
+                if i['favoriteFruit'] == 'strawberry':  
                         s += 1
-                if x['favoriteFruit'] == 'banana':
+                if i['favoriteFruit'] == 'banana':
                         b += 1
-                if x['favoriteFruit'] == 'apple':
+                if i['favoriteFruit'] == 'apple':
                         a += 1
         fruits = [{'fruit' : 'strawberry', 'count' : s}, {'fruit' : 'banana', 'count' : b}, {'fruit' : 'apple', 'count' : a}]   
-        total_count = (max([x['count'] for x in fruits]), max([x['fruit'] for x in fruits]))  
+        total_count = (max([i['count'] for i in fruits]), max([i['fruit'] for i in fruits]))  
         return total_count
 
 fav_fruit()
@@ -131,16 +131,22 @@ def least_fav_fruit():
         b = 0
         a = 0
         for x in data:
-                if x['favoriteFruit'] == 'strawberry':  
+                if i['favoriteFruit'] == 'strawberry':  
                         s += 1
-                if x['favoriteFruit'] == 'banana':
+                if i['favoriteFruit'] == 'banana':
                         b += 1
-                if x['favoriteFruit'] == 'apple':
+                if i['favoriteFruit'] == 'apple':
                         a += 1
         fruits = [{'fruit' : 'strawberry', 'count' : s}, {'fruit' : 'banana', 'count' : b}, {'fruit' : 'apple', 'count' : a}]   
-        total_count = (min([x['count'] for x in fruits]), min([x['fruit'] for x in fruits]))  
+        total_count = (min([i['count'] for i in fruits]), min([i['fruit'] for i in fruits]))  
         return total_count
 
 least_fav_fruit()
 
-        #     - Total number of unread messages for all users
+#     - Total number of unread messages for all users
+
+unread_m = [int(i['greeting'].lower().strip("abcdefghijklmonpqrstuvwxyz!,. ")) for i in data if 'unread' in i['greeting']] 
+
+total_m = sum(unread_m)
+
+print(f'there are a total of {total_m} unread messages for all users') 
