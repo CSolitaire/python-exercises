@@ -602,5 +602,449 @@ numbers = [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 17, 19, 23, 256, -8, -4, -2, 5, -
 # In[ ]:
 
 
+## 20 Python Data Structure Manipulation Exercises
+
+students = [
+    {
+        "id": "100001",
+        "student": "Ada Lovelace",
+        "coffee_preference": "light",
+        "course": "web development",
+        "grades": [70, 91, 82, 71],
+        "pets": [{"species": "horse", "age": 8}],
+    },
+    {
+        "id": "100002",
+        "student": "Thomas Bayes",
+        "coffee_preference": "medium",
+        "course": "data science",
+        "grades": [75, 73, 86, 100],
+        "pets": [],
+    },
+    {
+        "id": "100003",
+        "student": "Marie Curie",
+        "coffee_preference": "light",
+        "course": "web development",
+        "grades": [70, 89, 69, 65],
+        "pets": [{"species": "cat", "age": 0}],
+    },
+    {
+        "id": "100004",
+        "student": "Grace Hopper",
+        "coffee_preference": "dark",
+        "course": "data science",
+        "grades": [73, 66, 83, 92],
+        "pets": [{"species": "dog", "age": 4}, {"species": "cat", "age": 4}],
+    },
+    {
+        "id": "100005",
+        "student": "Alan Turing",
+        "coffee_preference": "dark",
+        "course": "web development",
+        "grades": [78, 98, 85, 65],
+        "pets": [
+            {"species": "horse", "age": 6},
+            {"species": "horse", "age": 7},
+            {"species": "dog", "age": 5},
+        ],
+    },
+    {
+        "id": "100006",
+        "student": "Rosalind Franklin",
+        "coffee_preference": "dark",
+        "course": "data science",
+        "grades": [76, 70, 96, 81],
+        "pets": [],
+    },
+    {
+        "id": "100007",
+        "student": "Elizabeth Blackwell",
+        "coffee_preference": "dark",
+        "course": "web development",
+        "grades": [69, 94, 89, 86],
+        "pets": [{"species": "cat", "age": 10}],
+    },
+    {
+        "id": "100008",
+        "student": "Rene Descartes",
+        "coffee_preference": "medium",
+        "course": "data science",
+        "grades": [87, 79, 90, 99],
+        "pets": [{"species": "cat", "age": 10}, {"species": "cat", "age": 8}],
+    },
+    {
+        "id": "100009",
+        "student": "Ahmed Zewail",
+        "coffee_preference": "medium",
+        "course": "data science",
+        "grades": [74, 99, 93, 89],
+        "pets": [{"species": "cat", "age": 0}, {"species": "cat", "age": 0}],
+    },
+    {
+        "id": "100010",
+        "student": "Chien-Shiung Wu",
+        "coffee_preference": "medium",
+        "course": "web development",
+        "grades": [82, 92, 91, 65],
+        "pets": [{"species": "cat", "age": 8}],
+    },
+    {
+        "id": "100011",
+        "student": "William Sanford Nye",
+        "coffee_preference": "dark",
+        "course": "data science",
+        "grades": [70, 92, 65, 99],
+        "pets": [{"species": "cat", "age": 8}, {"species": "cat", "age": 5}],
+    },
+    {
+        "id": "100012",
+        "student": "Carl Sagan",
+        "coffee_preference": "medium",
+        "course": "data science",
+        "grades": [100, 86, 91, 87],
+        "pets": [{"species": "cat", "age": 10}],
+    },
+    {
+        "id": "100013",
+        "student": "Jane Goodall",
+        "coffee_preference": "light",
+        "course": "web development",
+        "grades": [80, 70, 68, 98],
+        "pets": [{"species": "horse", "age": 4}],
+    },
+    {
+        "id": "100014",
+        "student": "Richard Feynman",
+        "coffee_preference": "medium",
+        "course": "web development",
+        "grades": [73, 99, 86, 98],
+        "pets": [{"species": "dog", "age": 6}],
+    },
+]
+
+    # How many students are there?
+
+ print(f"There are {len(students)} students")
+
+    # How many students prefer light coffee? 
+
+light_coffee = [student['coffee_preference'] for student in students if student['coffee_preference'] == 'light']
+
+print(f'{len(light_coffee)} students prefer light coffee.')
+
+#     For each type of coffee roast?
+
+light = 0
+medium = 0
+dark = 0
+
+for i in students:
+    if i['coffee_preference'] == "light":
+        light += 1
+    elif i['coffee_preference'] == "medium":
+        medium += 1
+    elif i['coffee_preference'] == "dark":
+        dark += 1
+        
+print(f'{light} students prefer light coffee.')
+print(f'{medium} students prefer light coffee.')
+print(f'{dark} students prefer light coffee.')
+
+    # How many types of each pet are there?
+
+[x['pets'] for x in students]
+
+def student_pets():
+    h = 0
+    c = 0
+    d = 0
+    for x in students:
+        for items in x['pets']:
+            if items['species'] == 'horse':
+                h += 1
+            if items['species'] == 'cat':
+                c += 1
+            if items['species'] == 'dog':
+                 d += 1
+    print(f" The pets found in students include {c} cats, {d} dogs, and {h} horses.")
+
+student_pets()
+
+    # How many grades does each student have? 
+
+for x in students:
+    print(x['student'], 'has',len(x['grades']), 'grades')
+
+
+   # Do they all have the same number of grades?
+
+test = [len(x['grades']) for x in students]
+
+if len(set(test)) != 1:
+    print ('not all students have the same number of grades ')
+else:
+    print('all of the students have the same amount of grades')
+   
+   
+    # What is each student's grade average?
+
+for x in students:
+    print(x['student'],'has a grade average of', sum(x['grades']) / (len(x['grades'])))
+
+    # How many pets does each student have?
+
+for x in students:
+    print (x['student'], 'has', len(x['pets']), 'pets')
+
+    # How many students are in web development? data science?
+
+wd = 0
+ds = 0
+
+for x in students:
+    if x['course'] == 'web development':
+        wd += 1
+    if x['course'] == 'data science':
+        ds += 1 
+
+print(f'There are {wd} web development students.')
+print(f'There are {ds} data science  students.')
+
+    # What is the average number of pets for students in web development?
+
+wd_count = 0
+pet_count = 0
+
+for x in students:
+    if x['course'] == 'web development':
+        wd_count += 1
+        for i in x['pets']:
+            pet_count += 1
+
+# len([x for q in students for x in q['pets'] if q['course'] == 'web development'])
+
+# len([x for q in students if q['course'] == 'web development'])
+
+avg_pet_count_wd = round(pet_count / wd_count, 2)
+
+print(avg_pet_count_wd)
+
+    # What is the average pet age for students in data science?
+
+
+pet_count = 0
+pet_age = 0
+
+for stud in students:
+    if stud['course'] == 'data science':
+        for pet in stud['pets']:
+            pet_age += pet['age']
+            pet_count += 1
+            
+# len([x for q in students for x in q['pets'] if q['course'] == 'web development'])
+
+avg_pet_age_ds = round(pet_age / pet_count, 2)
+
+print(avg_pet_age_ds)
+
+
+    # What is most frequent coffee preference for data science students?
+
+light = 0
+medium = 0
+dark = 0
+
+for i in students:
+    if i['course'] == 'data science':
+        if i['coffee_preference'] == "light":
+            light += 1
+        elif i['coffee_preference'] == "medium":
+            medium += 1
+        elif i['coffee_preference'] == "dark":
+            dark += 1
+
+cc = [{"preference":'light', "votes":light}, {"preference":'medium', "votes":medium}, {"preference":'dark', "votes":dark}]
+
+seq = max([x['votes'] for x in cc])
+
+
+for x in cc:
+    if x['votes'] == seq:
+        print(f"{x['preference']} is the most popular coffee preference with {x['votes']}")
+
+    # What is the least frequent coffee preference for web development students?
+
+l = 0
+m = 0
+d = 0
+
+for x in students:
+    if x['course'] == 'web development':
+        if x['coffee_preference'] == 'light':
+            l += 1
+        elif x['coffee_preference'] == 'medium':
+            m += 1
+        elif x['coffee_preference'] == 'dark':
+            d += 1
+
+cc = [{"preference":'light', "votes":l}, {"preference":'medium', "votes":m}, {"preference":'dark', "votes":d}]
+
+
+seq = [x['votes'] for x in cc]
+
+for x in cc:
+    if x['votes'] == min(seq):
+        print(f"{x['preference']} is the least favorite coffee preference with only {x['votes']} votes")
+
+    # What is the average grade for students with at least 2 pets?
+
+grades_combined = 0
+number_of_grades = 0
+
+for x in students:
+    if len([i for i in x['pets']]) > 1:
+        grades_combined += sum(x['grades'])
+        number_of_grades += len([i for i in x['grades']])
+
+avg_grd_2_pets = round(grades_combined / number_of_grades, 2)
+
+print(avg_grd_2_pets)
+
+    # How many students have 3 pets?
+
+total_students = 0
+
+for x in students:
+    if len([i for i in x['pets']]) == 3:
+        total_students += 1
+    
+print(f"{total_students} student(s) has exactly three pets.")
+
+#alternate answer
+# print(f"{len([x for x in students if len(x['pets']) == 3])} student(s) have 3 exactly 3 pets ")
+
+    # What is the average grade for students with 0 pets?
+
+grades_combined = 0
+number_of_grades = 0
+
+for x in students:
+    if len([i for i in x['pets']]) == 0:
+        grades_combined += sum(x['grades'])
+        number_of_grades += len([i for i in x['grades']])
+
+avg_grade_no_pets = round(grades_combined / number_of_grades , 2)
+
+print(avg_grade_no_pets)
+
+    # What is the average grade for web development students? 
+combined_grades = 0
+number_of_grades = 0
+
+for x in students:
+    if x['course'] == 'web development':
+        combined_grades += sum(x['grades'])
+        number_of_grades += len([i for i in x['grades']])
+
+avg_grade_wd = round(combined_grades / number_of_grades , 2)
+
+print(avg_grade_wd)
+
+
+    # data science students?
+
+combined_grades = 0
+number_of_grades = 0
+
+for x in students:
+    if x['course'] == 'data science':
+        combined_grades += sum(x['grades'])
+        number_of_grades += len([i for i in x['grades']])
+
+avg_grade_wd = round(combined_grades / number_of_grades , 2)
+
+print(avg_grade_wd)
+
+
+    # What is the average grade range (i.e. highest grade - lowest grade) for dark coffee drinkers?
+
+coll = []
+
+for x in students:
+    if x['coffee_preference'] == 'dark':
+        coll.append((( sum(x['grades']) / (len([x for x in x['grades']])), x['student'])))
+
+coll.sort(reverse = True)
+print(coll)
+
+    # What is the average number of pets for medium coffee drinkers?
+
+pet_count = 0
+student_count = 0
+
+for x in students:
+    if x['coffee_preference'] == 'medium':
+        pet_count += len([i for i in x['pets']])
+        student_count += 1
+        
+avg_pet_count = round(pet_count / student_count , 2)
+
+print(avg_pet_count)
+
+    # What is the most common type of pet for web development students?
+
+horses = 0
+cats = 0
+dogs = 0
+
+for x in students:
+    if x['course'] == 'web development':
+        for i in x['pets']:
+            if (i['species']) == 'horse':
+                horses += 1
+            if (i['species']) == 'cat':
+                cats += 1
+            if (i['species']) == 'dog':
+                dogs += 1
+
+animals=[{'pet':'horses', 'amount':horses}, {'pet':'cats', 'amount':cats}, {'pet':'dogs', 'amount':dogs}]
+
+seq = max([x['amount'] for x in animals])
+
+for x in animals:
+    if x['amount'] == seq:
+        print(f"{x['amount']} {x['pet']} are owned among all WD students, making them the most common pet type.")
+
+    # What is the average name length?
+
+name_lengths_total = 0
+total_students = 0
+
+for x in students:
+    name_lengths_total += len(x['student'])
+    total_students += 1
+    
+avg_name_length = round(name_lengths_total / total_students, 2)
+
+print(avg_name_length)
+
+
+    # What is the highest pet age for light coffee drinkers?
+
+
+oldest_pets = []
+
+ra = 0
+
+for x in students:
+    if x['coffee_preference'] == 'light':
+        for i in x['pets']:
+            if i['age'] >= ra:
+                ra = i['age']
+                oldest_pets.append((i['age'], i['species']))
+        
+print(oldest_pets)
+
 
 
